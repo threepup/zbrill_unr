@@ -3,7 +3,8 @@ using namespace std;
 
 int main(void)
 {
-	cout << "butts" << endl;
+	for(int i = 0; i < 15; i++)
+		cout << "butts" << endl;
 
 	return 0;
 }
