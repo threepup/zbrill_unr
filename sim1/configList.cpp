@@ -28,13 +28,22 @@ void configList::addNode(string val, int num, conNode* ptr)
 
 	conNode* temp;
 	temp = new conNode(val, num, ptr);
+
+	if(head == NULL){
+		head = new conNode(val, num, NULL);
+		cursor = head;
+	}
+
+	else{
 	
-	if(cursor->next == NULL)
-		cursor->next = temp;
-	else
-	{
-		temp->next = cursor->next;
-		cursor->next = temp;
+		if(cursor->next == NULL)
+			cursor->next = temp;
+		else
+		{
+			temp->next = cursor->next;
+			cursor->next = temp;
+		}
+
 	}
 
 }
