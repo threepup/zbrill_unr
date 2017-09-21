@@ -1,3 +1,5 @@
+//header file for the meta queue
+
 #pragma once
 
 #include <string>
@@ -9,12 +11,16 @@ class metaNode;
 class metaQueue{
 
 	private:
-		metaNode head;
+		metaNode* head;
 	public:
 		metaQueue();
 		~metaQueue();
-		void enqueue(string, int, metaNode*);
+		void enqueue(char, string, int);
 		int dequeue();
+		char checkType();
+		string checkTask();
+		int checkCycles();
+		bool isEmpty();
 		
 
 };

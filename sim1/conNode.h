@@ -1,3 +1,5 @@
+//Header file for the configuration node class
+
 #include <iostream>
 #include <fstream>
 #include <string>
@@ -14,6 +16,7 @@ class conNode
 		conNode* next; 
 
 	public:
+		conNode();
 		conNode(string, int, conNode*);
 
 };

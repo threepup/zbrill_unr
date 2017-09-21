@@ -1,3 +1,5 @@
+//Header file for the meta node class
+
 #pragma once
 
 #include <string>
@@ -10,11 +12,12 @@ class metaNode
 	friend class metaQueue;	
 
 	private:
+		char type;
 		string task;
 		int cycles;
 		metaNode* next;
 	public:
 		metaNode();
-		metaNode(string, int, metaNode*);
+		metaNode(char, string, int, metaNode*);
 
 };

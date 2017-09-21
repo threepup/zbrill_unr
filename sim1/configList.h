@@ -1,10 +1,10 @@
+//header file for the configuration list
+
 #pragma once
 
 #include <iostream>
 #include <fstream>
 #include <string>
-
-#include "conNode.h"
 
 using namespace std;
 
@@ -12,7 +12,7 @@ class conNode;
 class configList
 {
 	private:
-		conNode* root;
+		conNode* head;
 		conNode* cursor;
 	public:
 		configList();

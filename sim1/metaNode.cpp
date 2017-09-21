@@ -1,19 +1,21 @@
+//implementation for the meta node class
+
 #include "metaNode.h"
 
 metaNode::metaNode()
 {
-
+	type = '\0';
 	task = "";
-	cycle = 0;
+	cycles = 0;
 	next = NULL;
 
 }
 
-metaNode::metaNode(string val, int num, metaNode* ptr)
+metaNode::metaNode(char n, string val, int num, metaNode* ptr)
 {
-
+	type = n;
 	task = val;
-	cycle = num;
+	cycles = num;
 	next = ptr;
 
 }

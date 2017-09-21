@@ -1,3 +1,5 @@
+//implementation for the configuration list
+
 #include "configList.h"
 #include "conNode.h"
 
@@ -12,14 +14,17 @@ configList::~configList()
 
 	conNode* temp;
 
-	while(head->next != NULL)
-	{
-		temp = head;
-		head = head->next;
-		delete temp;
-	}
-
+	if(head != NULL){
+		while(head->next != NULL)
+		{
+			temp = head;
+			head = head->next;
+			delete temp;
+		}
+	
 	delete head;
+
+	}
 
 }
 

@@ -1,3 +1,5 @@
+//implentation for the meta queue
+
 #include "metaQueue.h"
 #include "metaNode.h"
 
@@ -25,13 +27,13 @@ metaQueue::~metaQueue()
 	delete head;
 }
 
-void metaQueue::enqueue(string val, int num){
+void metaQueue::enqueue(char n, string val, int num){
 
 	metaNode* temp;
-	temp = new metaNode(val, num, NULL);
+	temp = new metaNode(n, val, num, NULL);
 	metaNode* cursor;
 
-	if(head == NULL){
+	if(head == NULL)
 		head = temp;
 
 	else{
@@ -50,9 +52,12 @@ void metaQueue::enqueue(string val, int num){
 
 }
 
-int metaQueue:dequeue(){
+int metaQueue::dequeue(){
 	metaNode* temp;
 	int num;
+
+	if(head == NULL)
+		return -1;
 
 	temp = head;
 	head = head->next;
@@ -62,3 +67,27 @@ int metaQueue:dequeue(){
 	return num;
 
 }
+
+char metaQueue::checkType()
+{
+	return head->type;
+}
+
+string metaQueue::checkTask()
+{
+	return head->task;
+}
+
+int metaQueue::checkCycles()
+{
+	return head->cycles;
+}
+
+bool metaQueue::isEmpty()
+{
+	if(head == NULL)
+		return true;
+	else
+		return false;
+}
+
